@@ -1,0 +1,77 @@
+/**
+ *
+ * Typography Style - Font
+ *
+ * @author Takuto Yanagida
+ * @version 2020-09-06
+ *
+ */
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap');  // Laten
+@import url('https://fonts.googleapis.com/css?family=Spectral:300,300i,600,600i&display=swap');   // Laten Serif
+
+$stile-font-sans-serif-laten         : 'Open Sans' !default;
+$stile-font-sans-serif-laten-fallback: Verdana     !default;
+
+$stile-font-serif-laten              : 'Spectral'  !default;
+$stile-font-serif-laten-fallback     : Georgia     !default;
+
+$stile-font-monospace-laten          : Consolas, Monaco, 'Courier New', Courier !default;
+
+
+$stile-font-sans-serif:
+	$stile-font-sans-serif-laten,
+	$stile-font-sans-serif-laten-fallback,
+	if(variable-exists('stile-font-sans-serif-ja'), $stile-font-sans-serif-ja, null),
+	if(variable-exists('stile-font-sans-serif-ja-fallback'), $stile-font-sans-serif-ja-fallback, null),
+	sans-serif !default;
+
+$stile-font-serif:
+	$stile-font-serif-laten,
+	$stile-font-serif-laten-fallback,
+	if(variable-exists('stile-font-serif-ja'), $stile-font-serif-ja, null),
+	if(variable-exists('stile-font-serif-ja-fallback'), $stile-font-serif-ja-fallback, null),
+	serif !default;
+
+$stile-font-monospace:
+	$stile-font-monospace-laten,
+	if(variable-exists('stile-font-monospace-ja'), $stile-font-monospace-ja, null),
+	if(variable-exists('stile-font-monospace-ja-fallback'), $stile-font-monospace-ja-fallback, null),
+	monospace !default;
+
+$stile-font-sans-serif-ios: 'Helvetica Neue', sans-serif !default;  // Do not use -apple-system for avoiding garbled Japanese symbols
+$stile-font-serif-ios     :                        serif !default;
+
+$stile-font-sans-serif-android: $stile-font-sans-serif-laten-fallback, sans-serif !default;
+$stile-font-serif-android     : $stile-font-serif-laten-fallback,           serif !default;
+
+
+// -----------------------------------------------------------------------------
+
+
+@mixin font-family($pc-specific: false) {
+	@if $pc-specific {
+		font-family: $pc-specific, $stile-font-sans-serif;
+	} @else {
+		font-family: $stile-font-sans-serif;
+	}
+	// Need to use query.js
+	&.ios, .ios &         { font-family: $stile-font-sans-serif-ios; }
+	&.android, .android & { font-family: $stile-font-sans-serif-android; }
+}
+
+@mixin font-family-serif($pc-specific: false) {
+	@if $pc-specific {
+		font-family: $pc-specific, $stile-font-serif;
+	} @else {
+		font-family: $stile-font-serif;
+	}
+	// need to use query.js
+	&.ios, .ios &         { font-family: $stile-font-serif-ios; }
+	&.android, .android & { font-family: $stile-font-serif-android; }
+}
+
+@mixin font-family-monospace {
+	font-family: $stile-font-monospace;
+}

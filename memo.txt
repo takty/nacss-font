@@ -1,0 +1,2 @@
+Change the jump rate according to the screen size.
+Don't change the basic font size.
