@@ -1,74 +1,42 @@
-@use '../src/typography' as *;
+html {
+	scroll-behavior   : smooth;
+	scroll-padding-top: 8rem;
 
+	font-family: var(--font-mono);
+	font-family: var(--font-serif);
+	font-family: var(--font-sans);
+}
+
+header,
+main {
+	margin-inline: auto;
+	width : min(calc(100% - 2vw), 48rem);
+}
+
+header {
+	position  : sticky;
+	top       : 0;
+	z-index   : 1;
+	min-height: 6rem;
+
+	border          : 1px solid #ddd;
+	background-color: rgba(#fff, 0.5);
+	backdrop-filter : blur(4px);
+}
 
 :root {
-	--nacss-font-family: '';
-	--nacss-typography-line-interval: 0.8rem;
+	--nc-line-interval: 0.80;
+	--nc-line-factor  : 0.025;
 
-	// font-family: $stile-font-sans-serif;
-	@include font-family();
-
-	@media screen and (max-width: #{600px - 0.5}) {
-		--nacss-font-factor: 0.25;
-	}
-	@media screen and (min-width: 600px) and (max-width: #{900px - 0.5}) {
-		--nacss-font-factor: 0.5;
-	}
-	@media screen and (min-width: 900px) and (max-width: #{1200px - 0.5}) {
-		--nacss-font-factor: 0.75;
-	}
-	@media screen and (min-width: 1200px) and (max-width: #{1800px - 0.5}) {
-		--nacss-font-factor: 1;
-	}
-	@media screen and (min-width: 1800px) {
-		--nacss-font-factor: 1;
-	}
-
+	--nc-font-factor: 0.70;
+	@media screen and (min-width: 600px)  { --nc-font-factor: 0.80; }
+	@media screen and (min-width: 900px)  { --nc-font-factor: 0.90; }
+	@media screen and (min-width: 1200px) { --nc-font-factor: 1.00; }
 }
 
-.stile {
-	margin-left: auto;
-	margin-right: auto;
-	width: min(48rem, calc(100% - 2rem));
-
-	> * + * {
-		margin-top: var(--nacss-typography-line-interval);
-	}
+.sample-text {
+	display           : -webkit-box;
+	overflow          : hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
 }
-
-.font-size-level-1 {
-	--nacss-font-size: calc(1rem + (1rem - 1rem) * var(--nacss-font-factor));
-	font-size: var(--nacss-font-size);
-	line-height: calc(var(--nacss-font-size) + var(--nacss-typography-line-interval));
-}
-
-.font-size-level-2 {
-	--nacss-font-size: calc(1rem + (1.25rem - 1rem) * var(--nacss-font-factor));
-	font-size: var(--nacss-font-size);
-	line-height: calc(var(--nacss-font-size) + var(--nacss-typography-line-interval));
-}
-
-.font-size-level-3 {
-	--nacss-font-size: calc(1rem + (1.5rem - 1rem) * var(--nacss-font-factor));
-	font-size: var(--nacss-font-size);
-	line-height: calc(var(--nacss-font-size) + var(--nacss-typography-line-interval));
-}
-
-.font-size-level-4 {
-	--nacss-font-size: calc(1rem + (2rem - 1rem) * var(--nacss-font-factor));
-	font-size: var(--nacss-font-size);
-	line-height: calc(var(--nacss-font-size) + var(--nacss-typography-line-interval));
-}
-
-.font-size-level-5 {
-	--nacss-font-size: calc(1rem + (2.5rem - 1rem) * var(--nacss-font-factor));
-	font-size: var(--nacss-font-size);
-	line-height: calc(var(--nacss-font-size) + var(--nacss-typography-line-interval));
-}
-
-.font-size-level-6 {
-	--nacss-font-size: calc(1rem + (3rem - 1rem) * var(--nacss-font-factor));
-	font-size: var(--nacss-font-size);
-	line-height: calc(var(--nacss-font-size) + var(--nacss-typography-line-interval));
-}
-

@@ -3,19 +3,20 @@
  * Typography Style - Font [Ja]
  *
  * @author Takuto Yanagida
- * @version 2020-09-06
+ * @version 2021-11-12
  *
  */
 
 
-$stile-font-sans-serif-ja         : 'YuGothicM', 'Yu Gothic', 'YuGothic' !default;
-$stile-font-sans-serif-ja-fallback: Meiryo !default;
+@use 'sass:string';
 
-$stile-font-serif-ja              : 'YuMinchoM', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro' !default;
-$stile-font-serif-ja-fallback     : Meiryo !default;
 
-$stile-font-monospace-ja          : 'BIZ UDGothic' !default;
-$stile-font-monospace-ja-fallback : 'Osaka-Mono' !default;
+$font-ja-yu-sans : "YuGothicM, 'Yu Gothic', YuGothic" !default;
+$font-ja-yu-serif: "YuMinchoM, 'Yu Mincho', YuMincho" !default;
+
+$font-ja-sans : "'Hiragino Kaku Gothic ProN'", $font-ja-yu-sans !default;
+$font-ja-serif: "'Hiragino Mincho ProN'", $font-ja-yu-serif !default;
+$font-ja-mono : "'BIZ UDGothic'", Osaka-Mono !default;
 
 
 // -----------------------------------------------------------------------------
