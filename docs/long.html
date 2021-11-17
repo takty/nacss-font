@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Long Sample Text - nacss-typography</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/typography.min.css?v232723t">
+<link rel="stylesheet" href="css/style.min.css?v232723t">
+<script>
+	function toEn() {
+		const ps = document.querySelectorAll('p[data-nc-font]');
+		for (const p of ps) {
+			p.innerHTML = 'One morning, when <strong>Gregor Samsa</strong> woke from troubled dreams, he found himself transformed in his bed into <strong>a horrible vermin</strong>. He lay on his armour - like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.';
+		}
+	}
+	function toJa() {
+		const ps = document.querySelectorAll('p[data-nc-font]');
+		for (const p of ps) {
+			p.innerHTML = 'ある朝、<strong>グレゴール・サムサ</strong> (<strong>Gregor Samsa</strong>)が夢から覚めると、「ベッド」の中で自分が恐ろしい<strong>害獣</strong>に変わっていた。「鎧」のような背中に横たわり（He lay on his armour）、少し頭を上げると【茶色いお腹】が見えた。少しドーム状になっていて、アーチで硬い部分に分かれている。布団はそれをほとんど覆うことができず、今にも滑り落ちてしまいそうだった。';
+		}
+	}
+	function changeFont(type) {
+		document.documentElement.style.fontFamily = `var(--font-${type})`;
+	}
+	document.addEventListener('DOMContentLoaded', () => toEn());
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Long Sample Text</h1>
+		<div>
+			<button onclick="toEn();">To English</button>
+			<button onclick="toJa();">To Japanese</button>
+		</div>
+		<div>
+			<button onclick="changeFont('sans');">Sans</button>
+			<button onclick="changeFont('serif');">Serif</button>
+			<button onclick="changeFont('mono');">Mono</button>
+		</div>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<h3>Level 1</h3>
+		<p class="sample-text" data-nc-font="1"></p>
+
+		<h3>Level 2</h3>
+		<p class="sample-text" data-nc-font="2"></p>
+
+		<h3>Level 3</h3>
+		<p class="sample-text" data-nc-font="3"></p>
+
+		<h3>Level 4 (1rem)</h3>
+		<p class="sample-text" data-nc-font="4"></p>
+
+		<h3>Level 5</h3>
+		<p class="sample-text" data-nc-font="5"></p>
+
+		<h3>Level 6</h3>
+		<p class="sample-text" data-nc-font="6"></p>
+
+		<h3>Level 7</h3>
+		<p class="sample-text" data-nc-font="7"></p>
+
+		<h3>Level 8</h3>
+		<p class="sample-text" data-nc-font="8"></p>
+
+		<h3>Level 9</h3>
+		<p class="sample-text" data-nc-font="9"></p>
+
+		<h3>Level 10</h3>
+		<p class="sample-text" data-nc-font="10"></p>
+
+		<h3>Level 11</h3>
+		<p class="sample-text" data-nc-font="11"></p>
+
+		<h3>Level 12</h3>
+		<p class="sample-text" data-nc-font="12"></p>
+	</main>
+
+</body>
+</html>

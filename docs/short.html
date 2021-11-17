@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Short Sample Text - nacss-typography</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/typography.min.css?v232723t">
+<link rel="stylesheet" href="css/style.min.css?v232723t">
+<script>
+	function toEn() {
+		const ps = document.querySelectorAll('[data-nc-font]');
+		for (let i = 0; i < ps.length; i += 1) {
+			ps[i].innerHTML = `Font size and line height ${i + 1}`;
+		}
+	}
+	function toJa() {
+		const ps = document.querySelectorAll('[data-nc-font]');
+		for (let i = 0; i < ps.length; i += 1) {
+			ps[i].innerHTML = `文字サイズ & 行高 ${i + 1}`;
+		}
+	}
+	function changeFont(type) {
+		document.documentElement.style.fontFamily = `var(--font-${type})`;
+	}
+	document.addEventListener('DOMContentLoaded', () => toEn());
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Short Sample Text</h1>
+		<div>
+			<button onclick="toEn();">To English</button>
+			<button onclick="toJa();">To Japanese</button>
+		</div>
+		<div>
+			<button onclick="changeFont('sans');">Sans</button>
+			<button onclick="changeFont('serif');">Serif</button>
+			<button onclick="changeFont('mono');">Mono</button>
+		</div>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<div data-nc-font="1"></div>
+		<div data-nc-font="2"></div>
+		<div data-nc-font="3"></div>
+		<div data-nc-font="4"></div>
+		<div data-nc-font="5"></div>
+		<div data-nc-font="6"></div>
+		<div data-nc-font="7"></div>
+		<div data-nc-font="8"></div>
+		<div data-nc-font="9"></div>
+		<div data-nc-font="10"></div>
+		<div data-nc-font="11"></div>
+		<div data-nc-font="12"></div>
+		<div data-nc-font="13"></div>
+		<div data-nc-font="14"></div>
+		<div data-nc-font="15"></div>
+		<div data-nc-font="16"></div>
+	</main>
+
+</body>
+</html>
