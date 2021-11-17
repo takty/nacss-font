@@ -3,7 +3,7 @@
  * Font
  *
  * @author Takuto Yanagida
- * @version 2021-11-12
+ * @version 2021-11-17
  *
  */
 
@@ -30,3 +30,13 @@ $font-mono:
 	$font-en-mono,
 	if(meta.global-variable-exists('font-ja-mono', 'font-ja'), font-ja.$font-ja-mono, null),
 	monospace !default;
+
+
+// -----------------------------------------------------------------------------
+
+
+@mixin custom-property() {
+	--nc-font-sans : #{$font-sans};
+	--nc-font-serif: #{$font-serif};
+	--nc-font-mono : #{$font-mono};
+}

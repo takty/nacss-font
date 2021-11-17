@@ -3,9 +3,19 @@
  * Typesetting
  *
  * @author Takuto Yanagida
- * @version 2021-11-12
+ * @version 2021-11-17
  *
  */
+
+
+@mixin custom-property() {
+	--nc-font-factor  : 1;
+	--nc-line-interval: 0.5;
+	--nc-line-factor  : 0.025;
+}
+
+
+// -----------------------------------------------------------------------------
 
 
 @function font-size(

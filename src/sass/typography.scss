@@ -3,7 +3,7 @@
  * Typography
  *
  * @author Takuto Yanagida
- * @version 2021-11-12
+ * @version 2021-11-17
  *
  */
 
@@ -12,14 +12,13 @@
 @use 'typeset';
 
 
+:root {
+	@include font.custom-property();
+	@include typeset.custom-property();
+}
+
 @for $i from 1 through 16 {
 	[data-nc-font='#{$i}'] {
 		@include typeset.font-size-line-height($i);
 	}
-}
-
-:root {
-	--font-sans : #{font.$font-sans};
-	--font-serif: #{font.$font-serif};
-	--font-mono : #{font.$font-mono};
 }
