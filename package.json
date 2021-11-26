@@ -1,7 +1,7 @@
 {
-	"name": "nacss-typography",
+	"name": "nacss-font",
 	"version": "1.0.0",
-	"description": "A Typography Style Sheet",
+	"description": "A Font Style Sheet",
 	"author": "Takuto Yanagida",
 	"main": "gulpfile.js",
 	"scripts": {
@@ -11,13 +11,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/takty/nacss-typography.git"
+		"url": "git+https://github.com/takty/nacss-font.git"
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/takty/nacss-typography/issues"
+		"url": "https://github.com/takty/nacss-font/issues"
 	},
-	"homepage": "https://github.com/takty/nacss-typography#readme",
+	"homepage": "https://github.com/takty/nacss-font#readme",
 	"browserslist": [
 		"> 1%",
 		"last 2 versions",
@@ -38,7 +38,7 @@
 		"gulp-rename": "^2.0.0",
 		"gulp-sass": "^5.0.0",
 		"gulp-terser": "^2.1.0",
-		"sass": "^1.43.4"
+		"sass": "^1.43.5"
 	},
 	"devDependencies": {
 		"gulp-ignore": "^3.0.0",

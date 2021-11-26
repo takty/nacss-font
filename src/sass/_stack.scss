@@ -1,6 +1,6 @@
 /**
  *
- * Font
+ * Font Stack
  *
  * @author Takuto Yanagida
  * @version 2021-11-17
@@ -9,7 +9,7 @@
 
 
 @use 'sass:meta';
-@use 'font-ja';
+@use 'stack-ja';
 
 
 $font-en-sans : "'Helvetica Neue'", Arial !default;
@@ -18,17 +18,17 @@ $font-en-mono : ui-monospace, Menlo, Consolas !default;
 
 $font-sans:
 	$font-en-sans,
-	if(meta.global-variable-exists('font-ja-sans', 'font-ja'), font-ja.$font-ja-sans, null),
+	if(meta.global-variable-exists('font-ja-sans', 'stack-ja'), stack-ja.$font-ja-sans, null),
 	sans-serif !default;
 
 $font-serif:
 	$font-en-serif,
-	if(meta.global-variable-exists('font-ja-serif', 'font-ja'), font-ja.$font-ja-serif, null),
+	if(meta.global-variable-exists('font-ja-serif', 'stack-ja'), stack-ja.$font-ja-serif, null),
 	serif !default;
 
 $font-mono:
 	$font-en-mono,
-	if(meta.global-variable-exists('font-ja-mono', 'font-ja'), font-ja.$font-ja-mono, null),
+	if(meta.global-variable-exists('font-ja-mono', 'stack-ja'), stack-ja.$font-ja-mono, null),
 	monospace !default;
 
 
