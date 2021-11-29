@@ -27,13 +27,9 @@ main {
 }
 
 :root {
-	--nc-line-interval: 0.80;
-	--nc-line-factor  : 0.025;
-
 	--nc-font-factor: 0.70;
-	@media screen and (min-width: 600px)  { --nc-font-factor: 0.80; }
-	@media screen and (min-width: 900px)  { --nc-font-factor: 0.90; }
-	@media screen and (min-width: 1200px) { --nc-font-factor: 1.00; }
+	@media screen and (min-width: 600px) { --nc-font-factor: 0.85; }
+	@media screen and (min-width: 900px) { --nc-font-factor: 1.00; }
 }
 
 .sample-text {
