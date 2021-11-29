@@ -12,7 +12,7 @@
 @use 'typography';
 
 
-:where(html) {
+:root {
 	@include stack.custom-property();
 }
 
