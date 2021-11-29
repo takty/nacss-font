@@ -3,7 +3,7 @@
  * Font
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-11-29
  *
  */
 
@@ -12,9 +12,8 @@
 @use 'typography';
 
 
-:root {
+:where(html) {
 	@include stack.custom-property();
-	@include typography.custom-property();
 }
 
 @for $i from 1 through 16 {

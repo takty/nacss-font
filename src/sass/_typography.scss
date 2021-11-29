@@ -3,19 +3,9 @@
  * Typography
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-11-29
  *
  */
-
-
-@mixin custom-property() {
-	--nc-font-factor  : 1;
-	--nc-line-interval: 0.5;
-	--nc-line-factor  : 0.025;
-}
-
-
-// -----------------------------------------------------------------------------
 
 
 @function font-size(
@@ -35,9 +25,9 @@
 
 @function line-height(
 	$level,
-	$font-factor: #{var(--nc-font-factor, 1)},
-	$interval   : #{var(--nc-line-interval, 0.5)},
-	$line-factor: #{var(--nc-line-factor, 0.025)}
+	$font-factor: #{var(--nc-font-factor,   1)},
+	$interval   : #{var(--nc-line-interval, 0.85)},
+	$line-factor: #{var(--nc-line-factor,   0.025)}
 ) {
 	$s: font-size($level, $font-factor);
 	@if ($level < 4) {
