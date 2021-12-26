@@ -35,7 +35,7 @@ $font-mono:
 // -----------------------------------------------------------------------------
 
 
-@mixin property() {
+@mixin property {
 	--nc-font-sans : #{$font-sans};
 	--nc-font-serif: #{$font-serif};
 	--nc-font-mono : #{$font-mono};
