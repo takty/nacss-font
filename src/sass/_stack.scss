@@ -3,7 +3,7 @@
  * Font Stack
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-12-26
  *
  */
 
@@ -35,7 +35,7 @@ $font-mono:
 // -----------------------------------------------------------------------------
 
 
-@mixin custom-property() {
+@mixin property() {
 	--nc-font-sans : #{$font-sans};
 	--nc-font-serif: #{$font-serif};
 	--nc-font-mono : #{$font-mono};

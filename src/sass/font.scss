@@ -3,21 +3,20 @@
  * Font
  *
  * @author Takuto Yanagida
- * @version 2021-11-29
+ * @version 2021-12-26
  *
  */
 
 
-@use 'stack';
-@use 'typography';
+@use '_font';
 
 
 :root {
-	@include stack.custom-property();
+	@include font.property();
 }
 
 @for $i from 1 through 16 {
 	[data-nc-font='#{$i}'] {
-		@include typography.font-size-line-height($i);
+		@include font.font-size-line-height($i);
 	}
 }
