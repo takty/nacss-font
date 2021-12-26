@@ -1,8 +1,25 @@
+/**
+ *
+ * Style for Document
+ *
+ * @author Takuto Yanagida
+ * @version 2021-12-26
+ *
+ */
+
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
 html {
 	scroll-behavior   : smooth;
 	scroll-padding-top: 8rem;
 
 	font-family: var(--nc-font-sans);
+	line-height: 1.8;
 }
 
 header,
@@ -25,6 +42,10 @@ header {
 main {
 	margin-top: 2rem;
 }
+
+
+// -----------------------------------------------------------------------------
+
 
 :root {
 	--nc-font-factor: 0.70;
