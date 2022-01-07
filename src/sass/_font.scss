@@ -3,7 +3,7 @@
  * Font
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2022-01-07
  *
  */
 
@@ -15,5 +15,5 @@
 
 
 @mixin property {
-	@include stack.property();
+	@include stack.property;
 }
